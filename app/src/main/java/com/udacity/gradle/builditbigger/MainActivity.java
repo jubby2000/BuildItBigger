@@ -19,8 +19,6 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
     }
 
 
@@ -48,12 +46,7 @@ public class MainActivity extends ActionBarActivity {
 
     public void tellJoke(View view){
 
-        MyClass getANewJoke = new MyClass();
-
-        Intent intent = new Intent(MainActivity.this, AndroidLibMainActivity.class);
-        intent.putExtra("jokeTransfer", getANewJoke.getJoke());
-
-        startActivity(intent);
+        new EndpointsAsyncTask().execute(new Pair<Context, String>(this, "Manfred"));
 
         //Toast.makeText(this, getANewJoke.getJoke(), Toast.LENGTH_LONG).show();
     }
