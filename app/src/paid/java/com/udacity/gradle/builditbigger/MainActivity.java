@@ -27,6 +27,11 @@ public class MainActivity extends ActionBarActivity {
         spinner.setVisibility(View.GONE);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        spinner.setVisibility(View.GONE);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
